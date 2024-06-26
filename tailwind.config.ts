@@ -11,12 +11,16 @@ const config: Config = {
       colors: {
         divider: '#E5E6EB',
         priamry: {
+          content: '#222222',
           blue: {
             500: '#007AFF'
           }
         },
         secondary: {
           bg: '#F0F1F3'
+        },
+        neutral: {
+          content: '#898E98'
         },
         btn: {
           secondary: {
