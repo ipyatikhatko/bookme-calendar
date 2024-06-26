@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clsx(inter.className, 'flex justify-center items-center')}>
+        <div className="max-w-screen-sm relative w-screen h-screen">
+          <header className="px-4 pb-3 pt-12 border-b border-divider">
+            <div className="flex justify-between">
+              <Image 
+                src='/brand-logo.jpg' 
+                width={130} 
+                height={40} 
+                alt="Brand"
+                style={{
+                  objectFit: 'contain'
+                }}
+              />
+              <button className="btn-teritary">Account</button>
+            </div>
+          </header>
+          <main>
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }
