@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(inter.className, 'flex justify-center items-center')}>
-        <div className="max-w-screen-md relative h-screen md:border-x border-divider">
+        <div className="max-w-screen-sm w-full relative h-screen md:border-x border-divider">
           <header className="px-4 pb-3 pt-12 border-b border-divider">
             <div className="flex justify-between">
               <Image 

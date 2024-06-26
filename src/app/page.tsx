@@ -1,7 +1,12 @@
 import Calendar from '@/components/Calendar'
 import CheckoutFooter from '@/components/CheckoutFooter'
 import { add, format, set } from 'date-fns'
+import { Metadata } from 'next'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: 'Bookme'
+}
 
 interface Props {}
 
