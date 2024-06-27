@@ -3,7 +3,7 @@ import Calendar from '@/components/Calendar'
 import CheckoutFooter from '@/components/CheckoutFooter'
 import TimeSlots, { convertMillisecondsToDuration, TimeSlot, TimeSlotsByDate } from '@/components/TimeSlots'
 import { add, format } from 'date-fns'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 
 /* 
   NOTE: I think would be better to use Date/UTC string, not "yyyy-MM-dd" 
@@ -67,7 +67,7 @@ function FrontOfficePage() {
     if(!timeSlot || !selected) return;
     alert(`
       Date: ${selected.toLocaleDateString()}\n
-      Time: ${timeSlot.hours}:${timeSlot.hours || '00'}\n
+      Time: ${timeSlot.hours}:${timeSlot.minutes || '00'}\n
       Duration: ${convertMillisecondsToDuration(timeSlot.duration)}
       Price: €${timeSlot.price}
     `)
