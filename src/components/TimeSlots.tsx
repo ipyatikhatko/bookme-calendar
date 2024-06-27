@@ -60,7 +60,7 @@ function TimeSlots(props: Props) {
               {convertMillisecondsToDuration(duration)}
               </span>
             </div>
-            <span className='font-semibold text-sm text-secondary-content'>{price}</span>
+            <span className='font-semibold text-sm text-secondary-content'>€{price}</span>
           </li>
         ))}
       </ul>
