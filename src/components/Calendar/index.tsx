@@ -16,10 +16,11 @@ export type CalendarMode = 'month' | 'week'
 
 interface Props {
   availableDates: string[]
+  onDaySelected: (day: Date) => void
 }
 
 function Calendar(props: Props) {
-  const { availableDates } = props
+  const { availableDates, onDaySelected } = props
   const [selectedDay, setSelectedDay] = useState<Date | null>(null)
   const [month, setMonth] = useState(new Date())
   const [week, setWeek] = useState(getWeekNumber(month))
@@ -64,6 +65,7 @@ function Calendar(props: Props) {
       setWeek(getWeekNumber(day))
       setSelectedDay(day)
       setMode('week')
+      onDaySelected(day)
     }
   }
 

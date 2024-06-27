@@ -22,7 +22,7 @@ export default function CustomDay({ month, selected, isAvailable, onClick, mode,
     <td onClick={onClick} className='group overflow-visible relative text-center first:ml-3 last:mr-3 flex-1 grid place-content-center'>
       <div className={clsx(
         'text-primary-content font-semibold h-8 w-8 grid place-content-center rounded-full cursor-pointer',
-        selected && 'text-white bg-priamry-blue-500 hover:opacity-50',
+        selected && 'text-white bg-primary-blue-500 hover:opacity-50',
         isAvailable && !selected && 'hover:bg-secondary-bg',
         !isAvailable && 'cursor-default'
       )}>
@@ -31,7 +31,7 @@ export default function CustomDay({ month, selected, isAvailable, onClick, mode,
         </span>
       </div>
       <div className={clsx(
-        'h-[3px] w-[3px] opacity-0 bg-priamry-blue-500 absolute bottom-1 m-auto left-0 right-0 rounded-full',
+        'h-[3px] w-[3px] opacity-0 bg-primary-blue-500 absolute bottom-1 m-auto left-0 right-0 rounded-full',
         isAvailable && 'opacity-100',
         selected && '!opacity-0'
       )}/>

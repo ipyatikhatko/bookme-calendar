@@ -10,17 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         divider: '#E5E6EB',
-        priamry: {
+        primary: {
           content: '#222222',
           blue: {
             500: '#007AFF'
           }
         },
         secondary: {
-          bg: '#F0F1F3'
+          bg: '#F0F1F3',
+          content: '#4D5461'
         },
         neutral: {
-          content: '#898E98'
+          content: '#898E98',
+          600: '#212936'
         },
         btn: {
           secondary: {
